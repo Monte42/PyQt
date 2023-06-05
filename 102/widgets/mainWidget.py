@@ -1,8 +1,7 @@
 import sys
 from PyQt6.QtWidgets import QScrollArea
-from .helloWidget import HelloWidget as w
 
 class MainWidget(QScrollArea):
-    def __init__(self):
+    def __init__(self, widget):
         super().__init__()
-        self.setWidget(w())
+        self.setWidget(widget())

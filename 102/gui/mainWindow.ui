@@ -51,54 +51,76 @@
      </property>
      <addaction name="fontDefault"/>
      <addaction name="separator"/>
-     <addaction name="fontCambiri"/>
-     <addaction name="actionSomething_Else"/>
-     <addaction name="actionScript"/>
+     <addaction name="fontCambria"/>
+     <addaction name="fontInkFree"/>
+     <addaction name="fontBoli"/>
     </widget>
     <widget class="QMenu" name="menuFont_Size">
      <property name="title">
       <string>Font Size</string>
      </property>
-     <addaction name="action12"/>
+     <addaction name="sizeDefault"/>
      <addaction name="separator"/>
-     <addaction name="action12_2"/>
-     <addaction name="action18"/>
-     <addaction name="action22"/>
+     <addaction name="font16"/>
+     <addaction name="font18"/>
+     <addaction name="font22"/>
     </widget>
-    <addaction name="clearWorkSpace"/>
+    <addaction name="clearWorkspace"/>
     <addaction name="separator"/>
     <addaction name="menuChoose_Font"/>
     <addaction name="menuFont_Size"/>
    </widget>
+   <widget class="QMenu" name="menuview">
+    <property name="title">
+     <string>view</string>
+    </property>
+    <addaction name="showSideMenu"/>
+   </widget>
    <addaction name="menutools"/>
+   <addaction name="menuview"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
-  <action name="clearWorkSpace">
+  <action name="clearWorkspace">
    <property name="text">
     <string>Clear Workspace</string>
    </property>
    <property name="statusTip">
     <string>Clear whole workspace...</string>
    </property>
-  </action>
-  <action name="fontCambiri">
-   <property name="text">
-    <string>Cambiri</string>
+   <property name="shortcut">
+    <string>Ctrl+Shift+C</string>
    </property>
   </action>
-  <action name="actionSomething_Else">
+  <action name="fontCambria">
    <property name="text">
-    <string>Something Else</string>
+    <string>Cambria</string>
+   </property>
+   <property name="statusTip">
+    <string>Sent Font Family to Cambria...</string>
    </property>
   </action>
-  <action name="actionScript">
+  <action name="fontInkFree">
    <property name="text">
-    <string>Script</string>
+    <string>Ink Free</string>
+   </property>
+   <property name="statusTip">
+    <string>Sent Font Family to Ink Free...</string>
+   </property>
+  </action>
+  <action name="fontBoli">
+   <property name="text">
+    <string>MV Boli</string>
+   </property>
+   <property name="statusTip">
+    <string>Sent Font Family to MV Boli...</string>
    </property>
   </action>
   <action name="fontDefault">
    <property name="text">
     <string>Default</string>
+   </property>
+   <property name="statusTip">
+    <string>Default Font And Size...</string>
    </property>
   </action>
   <action name="action12">
@@ -106,19 +128,46 @@
     <string>Default</string>
    </property>
   </action>
-  <action name="action12_2">
+  <action name="font16">
    <property name="text">
-    <string>12</string>
+    <string>16</string>
+   </property>
+   <property name="statusTip">
+    <string>Sent Font Size To 16...</string>
    </property>
   </action>
-  <action name="action18">
+  <action name="font18">
    <property name="text">
     <string>18</string>
    </property>
+   <property name="statusTip">
+    <string>Sent Font Size To 18...</string>
+   </property>
   </action>
-  <action name="action22">
+  <action name="n2">
    <property name="text">
     <string>22</string>
+   </property>
+  </action>
+  <action name="font22">
+   <property name="text">
+    <string>22</string>
+   </property>
+   <property name="statusTip">
+    <string>Sent Font Size To 22...</string>
+   </property>
+  </action>
+  <action name="sizeDefault">
+   <property name="text">
+    <string>Default</string>
+   </property>
+   <property name="statusTip">
+    <string>Default Font And Size...</string>
+   </property>
+  </action>
+  <action name="showSideMenu">
+   <property name="text">
+    <string>Side Menu</string>
    </property>
   </action>
  </widget>

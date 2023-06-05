@@ -1,5 +1,5 @@
 from PyQt6.QtWidgets import QWidget, QScrollArea
-from PyQt6 import uic
+from PyQt6 import uic, QtGui
 
 class HelloWidget(QWidget):
     def __init__(self):
@@ -10,3 +10,20 @@ class HelloWidget(QWidget):
     def sayHello(self):
         inputTxt = self.input.text()
         self.output.setText(f'Hello There {inputTxt}')
+
+    def updateFont(self,fontfamily):
+        font = QtGui.QFont()
+        font.setFamily(fontfamily)
+        font.setPointSize(20)
+        self.input.setFont(font)
+        self.btn.setFont(font)
+        self.output.setFont(font)
+        return self.window()
+
+    def updateFontsize(self,size):
+        font = QtGui.QFont()
+        font.setPointSize(size)
+        self.input.setFont(font)
+        self.btn.setFont(font)
+        self.output.setFont(font)
+        return self.window()
