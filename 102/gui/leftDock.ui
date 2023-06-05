@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>490</width>
+    <width>325</width>
     <height>637</height>
    </rect>
   </property>
@@ -22,6 +22,12 @@
     <height>415</height>
    </size>
   </property>
+  <property name="maximumSize">
+   <size>
+    <width>450</width>
+    <height>2000</height>
+   </size>
+  </property>
   <property name="floating">
    <bool>false</bool>
   </property>
@@ -31,42 +37,42 @@
   <widget class="QWidget" name="dockWidgetContents">
    <layout class="QVBoxLayout" name="verticalLayout">
     <item>
-     <widget class="QLabel" name="label">
+     <widget class="QLabel" name="lableName">
       <property name="text">
-       <string>TextLabel</string>
+       <string>Desination Name</string>
       </property>
      </widget>
     </item>
     <item>
-     <widget class="QLineEdit" name="lineEdit"/>
+     <widget class="QLineEdit" name="inputName"/>
     </item>
     <item>
-     <widget class="QLabel" name="label_2">
+     <widget class="QLabel" name="labelState">
       <property name="text">
-       <string>TextLabel</string>
+       <string>State</string>
       </property>
      </widget>
     </item>
     <item>
-     <widget class="QLineEdit" name="lineEdit_2"/>
+     <widget class="QLineEdit" name="inputState"/>
     </item>
     <item>
-     <widget class="QLabel" name="label_3">
+     <widget class="QLabel" name="labelDate">
       <property name="frameShadow">
        <enum>QFrame::Sunken</enum>
       </property>
       <property name="text">
-       <string>TextLabel</string>
+       <string>Date Visited</string>
       </property>
      </widget>
     </item>
     <item>
-     <widget class="QDateTimeEdit" name="dateTimeEdit"/>
+     <widget class="QDateTimeEdit" name="inputDate"/>
     </item>
     <item>
-     <widget class="QLabel" name="label_4">
+     <widget class="QLabel" name="labelFun">
       <property name="text">
-       <string>TextLabel</string>
+       <string>Fun Level</string>
       </property>
      </widget>
     </item>
@@ -78,10 +84,24 @@
      </widget>
     </item>
     <item>
-     <widget class="QDial" name="dial"/>
+     <widget class="QDial" name="inputFun">
+      <property name="maximumSize">
+       <size>
+        <width>450</width>
+        <height>16777215</height>
+       </size>
+      </property>
+     </widget>
     </item>
     <item>
-     <widget class="QTextEdit" name="textEdit"/>
+     <widget class="QTextEdit" name="displayData">
+      <property name="cursor" stdset="0">
+       <cursorShape>ForbiddenCursor</cursorShape>
+      </property>
+      <property name="readOnly">
+       <bool>true</bool>
+      </property>
+     </widget>
     </item>
    </layout>
   </widget>

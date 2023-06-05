@@ -5,6 +5,8 @@ from PyQt6 import uic
 
 # My Widgets
 from widgets.leftDock import LeftDock
+from widgets.rightDock import RightDock
+from widgets.bottomDock import BottomDock
 from widgets.mainWidget import MainWidget as main
 from widgets.helloWidget import HelloWidget
 
@@ -27,6 +29,8 @@ class App(QMainWindow):
 
         # Adding docking widgets
         self.addDockWidget(Qt.DockWidgetArea.LeftDockWidgetArea, LeftDock())
+        self.addDockWidget(Qt.DockWidgetArea.BottomDockWidgetArea, BottomDock())
+        self.addDockWidget(Qt.DockWidgetArea.RightDockWidgetArea, RightDock())
         
         # Adding the Main Widget
         self.setCentralWidget(main(HelloWidget))
