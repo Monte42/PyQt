@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>420</width>
-    <height>773</height>
+    <height>762</height>
    </rect>
   </property>
   <property name="minimumSize">
@@ -26,9 +26,15 @@
    <string>Database Data</string>
   </property>
   <widget class="QWidget" name="dockWidgetContents">
-   <layout class="QVBoxLayout" name="verticalLayout_2">
-    <item>
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="1" column="0">
      <widget class="QTabWidget" name="displayData">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
       <property name="maximumSize">
        <size>
         <width>420</width>
@@ -39,7 +45,7 @@
        <enum>QTabWidget::Triangular</enum>
       </property>
       <property name="currentIndex">
-       <number>1</number>
+       <number>0</number>
       </property>
       <property name="movable">
        <bool>true</bool>
@@ -50,37 +56,7 @@
        </attribute>
        <layout class="QVBoxLayout" name="verticalLayout">
         <item>
-         <widget class="QTableWidget" name="tableCar">
-          <row>
-           <property name="text">
-            <string>1</string>
-           </property>
-          </row>
-          <row>
-           <property name="text">
-            <string>2</string>
-           </property>
-          </row>
-          <row>
-           <property name="text">
-            <string>3</string>
-           </property>
-          </row>
-          <row>
-           <property name="text">
-            <string>4</string>
-           </property>
-          </row>
-          <row>
-           <property name="text">
-            <string>5</string>
-           </property>
-          </row>
-          <row>
-           <property name="text">
-            <string>6</string>
-           </property>
-          </row>
+         <widget class="QTableWidget" name="tableCars">
           <column>
            <property name="text">
             <string>Make</string>
@@ -106,156 +82,6 @@
             <string>Price (USD)</string>
            </property>
           </column>
-          <item row="0" column="0">
-           <property name="text">
-            <string>Chevy</string>
-           </property>
-          </item>
-          <item row="0" column="1">
-           <property name="text">
-            <string>Zo6</string>
-           </property>
-          </item>
-          <item row="0" column="2">
-           <property name="text">
-            <string>2003</string>
-           </property>
-          </item>
-          <item row="0" column="3">
-           <property name="text">
-            <string>USA</string>
-           </property>
-          </item>
-          <item row="0" column="4">
-           <property name="text">
-            <string>18000</string>
-           </property>
-          </item>
-          <item row="1" column="0">
-           <property name="text">
-            <string>Nissan</string>
-           </property>
-          </item>
-          <item row="1" column="1">
-           <property name="text">
-            <string>Skyline R-32</string>
-           </property>
-          </item>
-          <item row="1" column="2">
-           <property name="text">
-            <string>2002</string>
-           </property>
-          </item>
-          <item row="1" column="3">
-           <property name="text">
-            <string>Japan</string>
-           </property>
-          </item>
-          <item row="1" column="4">
-           <property name="text">
-            <string>42000</string>
-           </property>
-          </item>
-          <item row="2" column="0">
-           <property name="text">
-            <string>Chevy</string>
-           </property>
-          </item>
-          <item row="2" column="1">
-           <property name="text">
-            <string>Z51</string>
-           </property>
-          </item>
-          <item row="2" column="2">
-           <property name="text">
-            <string>2005</string>
-           </property>
-          </item>
-          <item row="2" column="3">
-           <property name="text">
-            <string>USA</string>
-           </property>
-          </item>
-          <item row="2" column="4">
-           <property name="text">
-            <string>22000</string>
-           </property>
-          </item>
-          <item row="3" column="0">
-           <property name="text">
-            <string>Dodge</string>
-           </property>
-          </item>
-          <item row="3" column="1">
-           <property name="text">
-            <string>ARC-Viper</string>
-           </property>
-          </item>
-          <item row="3" column="2">
-           <property name="text">
-            <string>2016</string>
-           </property>
-          </item>
-          <item row="3" column="3">
-           <property name="text">
-            <string>USA</string>
-           </property>
-          </item>
-          <item row="3" column="4">
-           <property name="text">
-            <string>145000</string>
-           </property>
-          </item>
-          <item row="4" column="0">
-           <property name="text">
-            <string>Ford</string>
-           </property>
-          </item>
-          <item row="4" column="1">
-           <property name="text">
-            <string>Mustang-GT</string>
-           </property>
-          </item>
-          <item row="4" column="2">
-           <property name="text">
-            <string>2022</string>
-           </property>
-          </item>
-          <item row="4" column="3">
-           <property name="text">
-            <string>Mexico</string>
-           </property>
-          </item>
-          <item row="4" column="4">
-           <property name="text">
-            <string>120000</string>
-           </property>
-          </item>
-          <item row="5" column="0">
-           <property name="text">
-            <string>Honda</string>
-           </property>
-          </item>
-          <item row="5" column="1">
-           <property name="text">
-            <string>Civic</string>
-           </property>
-          </item>
-          <item row="5" column="2">
-           <property name="text">
-            <string>2003</string>
-           </property>
-          </item>
-          <item row="5" column="3">
-           <property name="text">
-            <string>Canada</string>
-           </property>
-          </item>
-          <item row="5" column="4">
-           <property name="text">
-            <string>2500</string>
-           </property>
-          </item>
          </widget>
         </item>
        </layout>
@@ -284,33 +110,21 @@
           </column>
          </widget>
         </item>
-        <item>
-         <widget class="QPushButton" name="updateBtn">
-          <property name="text">
-           <string>Update</string>
-          </property>
-         </widget>
-        </item>
        </layout>
       </widget>
       <widget class="QWidget" name="locationTable">
        <attribute name="title">
         <string>Location Table</string>
        </attribute>
-       <widget class="QTableWidget" name="tableWidget">
+       <widget class="QTableWidget" name="tableLocation">
         <property name="geometry">
          <rect>
           <x>10</x>
           <y>10</y>
           <width>391</width>
-          <height>611</height>
+          <height>601</height>
          </rect>
         </property>
-        <row>
-         <property name="text">
-          <string>1</string>
-         </property>
-        </row>
         <column>
          <property name="text">
           <string>Dest. Name</string>
@@ -331,28 +145,15 @@
           <string>Fun Level (%)</string>
          </property>
         </column>
-        <item row="0" column="0">
-         <property name="text">
-          <string>Hersey Park</string>
-         </property>
-        </item>
-        <item row="0" column="1">
-         <property name="text">
-          <string>PA</string>
-         </property>
-        </item>
-        <item row="0" column="2">
-         <property name="text">
-          <string>07/12/2018</string>
-         </property>
-        </item>
-        <item row="0" column="3">
-         <property name="text">
-          <string>98</string>
-         </property>
-        </item>
        </widget>
       </widget>
+     </widget>
+    </item>
+    <item row="0" column="0">
+     <widget class="QPushButton" name="updateBtn">
+      <property name="text">
+       <string>Update</string>
+      </property>
      </widget>
     </item>
    </layout>
