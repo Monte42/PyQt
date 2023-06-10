@@ -1,6 +1,6 @@
 from PyQt6.QtWidgets import QWidget, QScrollArea
 from PyQt6 import uic, QtGui
-import MySQLdb as mdb
+from MySQLdb import _mysql
 
 class HelloWidget(QWidget):
     def __init__(self):
@@ -11,11 +11,12 @@ class HelloWidget(QWidget):
     def sayHello(self):
         inputTxt = self.input.text()
         message = f'Hello There {inputTxt}'
-        connnection = mdb.connect('localhost','root','root','pyqt6')
-        with connnection:
-            cur = connnection.cursor()
-            cur.execute("INSERT INTO hellos(name,message) VALUES('%s','%s')" % (''.join(inputTxt),''.join(message)))
-            print('data eneterd')
+        db = _mysql.connect('localhost','root','root','pyqt6')
+        query = """
+        INSERT INTO hellos(name,message)
+        VALUES('%s','%s');
+        """ % (''.join(inputTxt),''.join(message))
+        db.query(query)
         self.output.setText(f'"{message}": Created')
 
 

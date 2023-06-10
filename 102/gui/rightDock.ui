@@ -6,14 +6,14 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>400</width>
-    <height>590</height>
+    <width>420</width>
+    <height>773</height>
    </rect>
   </property>
   <property name="minimumSize">
    <size>
     <width>400</width>
-    <height>181</height>
+    <height>216</height>
    </size>
   </property>
   <property name="maximumSize">
@@ -26,8 +26,8 @@
    <string>Database Data</string>
   </property>
   <widget class="QWidget" name="dockWidgetContents">
-   <layout class="QGridLayout" name="gridLayout">
-    <item row="0" column="0">
+   <layout class="QVBoxLayout" name="verticalLayout_2">
+    <item>
      <widget class="QTabWidget" name="displayData">
       <property name="maximumSize">
        <size>
@@ -39,7 +39,7 @@
        <enum>QTabWidget::Triangular</enum>
       </property>
       <property name="currentIndex">
-       <number>0</number>
+       <number>1</number>
       </property>
       <property name="movable">
        <bool>true</bool>
@@ -264,131 +264,34 @@
        <attribute name="title">
         <string>Hello Table</string>
        </attribute>
-       <widget class="QTableWidget" name="tableHello">
-        <property name="geometry">
-         <rect>
-          <x>10</x>
-          <y>10</y>
-          <width>391</width>
-          <height>611</height>
-         </rect>
-        </property>
-        <row>
-         <property name="text">
-          <string>1</string>
-         </property>
-        </row>
-        <row>
-         <property name="text">
-          <string>2</string>
-         </property>
-        </row>
-        <row>
-         <property name="text">
-          <string>3</string>
-         </property>
-        </row>
-        <row>
-         <property name="text">
-          <string>4</string>
-         </property>
-        </row>
-        <row>
-         <property name="text">
-          <string>5</string>
-         </property>
-        </row>
-        <column>
-         <property name="text">
-          <string>name</string>
-         </property>
-        </column>
-        <column>
-         <property name="text">
-          <string>message</string>
-         </property>
-        </column>
-        <column>
-         <property name="text">
-          <string>date</string>
-         </property>
-        </column>
-        <item row="0" column="0">
-         <property name="text">
-          <string>Bob</string>
-         </property>
+       <layout class="QVBoxLayout" name="verticalLayout_3">
+        <item>
+         <widget class="QTableWidget" name="tableHello">
+          <column>
+           <property name="text">
+            <string>name</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>message</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>date</string>
+           </property>
+          </column>
+         </widget>
         </item>
-        <item row="0" column="1">
-         <property name="text">
-          <string>Hello There Bob</string>
-         </property>
+        <item>
+         <widget class="QPushButton" name="updateBtn">
+          <property name="text">
+           <string>Update</string>
+          </property>
+         </widget>
         </item>
-        <item row="0" column="2">
-         <property name="text">
-          <string>06/01/2023</string>
-         </property>
-        </item>
-        <item row="1" column="0">
-         <property name="text">
-          <string>Hellen</string>
-         </property>
-        </item>
-        <item row="1" column="1">
-         <property name="text">
-          <string>Hello There Hellen</string>
-         </property>
-        </item>
-        <item row="1" column="2">
-         <property name="text">
-          <string>06/02/2023</string>
-         </property>
-        </item>
-        <item row="2" column="0">
-         <property name="text">
-          <string>Sarah</string>
-         </property>
-        </item>
-        <item row="2" column="1">
-         <property name="text">
-          <string>Hello There Sarah</string>
-         </property>
-        </item>
-        <item row="2" column="2">
-         <property name="text">
-          <string>06/04/2023</string>
-         </property>
-        </item>
-        <item row="3" column="0">
-         <property name="text">
-          <string>John</string>
-         </property>
-        </item>
-        <item row="3" column="1">
-         <property name="text">
-          <string>Hello There John</string>
-         </property>
-        </item>
-        <item row="3" column="2">
-         <property name="text">
-          <string>06/05/2023</string>
-         </property>
-        </item>
-        <item row="4" column="0">
-         <property name="text">
-          <string>Jess</string>
-         </property>
-        </item>
-        <item row="4" column="1">
-         <property name="text">
-          <string>Hello There Jess</string>
-         </property>
-        </item>
-        <item row="4" column="2">
-         <property name="text">
-          <string>06/05/2023</string>
-         </property>
-        </item>
-       </widget>
+       </layout>
       </widget>
       <widget class="QWidget" name="locationTable">
        <attribute name="title">
