@@ -1,8 +1,14 @@
-from PyQt6.QtWidgets import QWidget
+from PyQt6.QtWidgets import QMainWindow
+from PyQt6.QtCore import Qt
+from PyQt6 import uic
+
+from widgets.carForm import CarForm
+from widgets.dbDisplay import CarList
 
 
-class MainWindow(QWidget):
-    def __init__(self):
+class MainWindow(QMainWindow):
+    def __init__(self,db):
         super().__init__()
-        self.resize(700,700)
-        self.setWindowTitle("Home")
+        uic.loadUi('./widgets/gui/mainWindow.ui', self)
+        self.addDockWidget(Qt.DockWidgetArea.LeftDockWidgetArea, CarForm())
+        self.addDockWidget(Qt.DockWidgetArea.RightDockWidgetArea, CarList())
