@@ -25,6 +25,8 @@ class App(QMainWindow):
         self.font18.triggered.connect(self.updateFont18)
         self.font22.triggered.connect(self.updateFont22)
         self.showSideMenu.triggered.connect(self.showLeftDock)
+        self.showBottomDock.triggered.connect(self.showBottomForm)
+        self.showRightDock.triggered.connect(self.showRightForm)
 
 
         # Adding docking widgets
@@ -51,6 +53,10 @@ class App(QMainWindow):
         self.setCentralWidget(HelloWidget.updateFontsize(HelloWidget(),22))
     def showLeftDock(self):
         self.addDockWidget(Qt.DockWidgetArea.LeftDockWidgetArea, LeftDock())
+    def showBottomForm(self):
+        self.addDockWidget(Qt.DockWidgetArea.BottomDockWidgetArea, BottomDock())
+    def showRightForm(self):
+        self.addDockWidget(Qt.DockWidgetArea.RightDockWidgetArea, RightDock())
 # Launching Application
 if __name__ == '__main__':
     app = QApplication(sys.argv)

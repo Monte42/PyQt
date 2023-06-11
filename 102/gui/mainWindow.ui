@@ -75,6 +75,8 @@
      <string>view</string>
     </property>
     <addaction name="showSideMenu"/>
+    <addaction name="showBottomDock"/>
+    <addaction name="showRightDock"/>
    </widget>
    <addaction name="menutools"/>
    <addaction name="menuview"/>
@@ -168,6 +170,16 @@
   <action name="showSideMenu">
    <property name="text">
     <string>Side Menu</string>
+   </property>
+  </action>
+  <action name="showBottomDock">
+   <property name="text">
+    <string>Bottom Dock</string>
+   </property>
+  </action>
+  <action name="showRightDock">
+   <property name="text">
+    <string>Right Dock</string>
    </property>
   </action>
  </widget>

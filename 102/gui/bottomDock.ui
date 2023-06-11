@@ -30,6 +30,32 @@
         </rect>
        </property>
        <layout class="QGridLayout" name="gridLayout">
+        <item row="8" column="0">
+         <widget class="QLabel" name="lablePrice">
+          <property name="font">
+           <font>
+            <family>PMingLiU-ExtB</family>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>Price:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="6" column="0">
+         <widget class="QLabel" name="lableCountry">
+          <property name="font">
+           <font>
+            <family>PMingLiU-ExtB</family>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>Country:</string>
+          </property>
+         </widget>
+        </item>
         <item row="1" column="0">
          <widget class="QComboBox" name="inputYear">
           <property name="font">
@@ -99,30 +125,37 @@
           </item>
          </widget>
         </item>
-        <item row="0" column="0">
-         <widget class="QLabel" name="lableYear">
+        <item row="5" column="0">
+         <widget class="QLineEdit" name="inputModel">
           <property name="font">
            <font>
-            <family>PMingLiU-ExtB</family>
-            <pointsize>14</pointsize>
+            <pointsize>16</pointsize>
            </font>
-          </property>
-          <property name="text">
-           <string>Year:</string>
           </property>
          </widget>
         </item>
-        <item row="2" column="0">
-         <widget class="QLabel" name="lableMake">
+        <item row="7" column="0">
+         <widget class="QComboBox" name="inputCountry">
           <property name="font">
            <font>
-            <family>PMingLiU-ExtB</family>
-            <pointsize>14</pointsize>
+            <pointsize>16</pointsize>
            </font>
           </property>
-          <property name="text">
-           <string>Make:</string>
-          </property>
+          <item>
+           <property name="text">
+            <string>USA</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Canada</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Mexico</string>
+           </property>
+          </item>
          </widget>
         </item>
         <item row="3" column="0">
@@ -174,6 +207,19 @@
           </item>
          </widget>
         </item>
+        <item row="0" column="0">
+         <widget class="QLabel" name="lableYear">
+          <property name="font">
+           <font>
+            <family>PMingLiU-ExtB</family>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>Year:</string>
+          </property>
+         </widget>
+        </item>
         <item row="4" column="0">
          <widget class="QLabel" name="lableModel">
           <property name="font">
@@ -184,74 +230,6 @@
           </property>
           <property name="text">
            <string>Model:</string>
-          </property>
-         </widget>
-        </item>
-        <item row="5" column="0">
-         <widget class="QLineEdit" name="inputModel">
-          <property name="font">
-           <font>
-            <pointsize>16</pointsize>
-           </font>
-          </property>
-         </widget>
-        </item>
-        <item row="6" column="0">
-         <widget class="QLabel" name="lableCountry">
-          <property name="font">
-           <font>
-            <family>PMingLiU-ExtB</family>
-            <pointsize>14</pointsize>
-           </font>
-          </property>
-          <property name="text">
-           <string>Country:</string>
-          </property>
-         </widget>
-        </item>
-        <item row="7" column="0">
-         <widget class="QComboBox" name="inputCountry">
-          <property name="font">
-           <font>
-            <pointsize>16</pointsize>
-           </font>
-          </property>
-          <item>
-           <property name="text">
-            <string>USA</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>Canada</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>Mexico</string>
-           </property>
-          </item>
-         </widget>
-        </item>
-        <item row="8" column="0">
-         <widget class="QLabel" name="lablePrice">
-          <property name="font">
-           <font>
-            <family>PMingLiU-ExtB</family>
-            <pointsize>14</pointsize>
-           </font>
-          </property>
-          <property name="text">
-           <string>Price:</string>
-          </property>
-         </widget>
-        </item>
-        <item row="9" column="0">
-         <widget class="QLineEdit" name="inputPrice">
-          <property name="font">
-           <font>
-            <pointsize>16</pointsize>
-           </font>
           </property>
          </widget>
         </item>
@@ -281,6 +259,46 @@
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Georgia'; font-size:20pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="0">
+         <widget class="QLabel" name="lableMake">
+          <property name="font">
+           <font>
+            <family>PMingLiU-ExtB</family>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>Make:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="9" column="0">
+         <widget class="QLineEdit" name="inputPrice">
+          <property name="font">
+           <font>
+            <pointsize>16</pointsize>
+           </font>
+          </property>
+         </widget>
+        </item>
+        <item row="10" column="0">
+         <widget class="QPushButton" name="submitBtn">
+          <property name="maximumSize">
+           <size>
+            <width>200</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>Submit</string>
           </property>
          </widget>
         </item>
