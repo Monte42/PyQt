@@ -4,8 +4,7 @@ import time
 from PyQt6.QtWidgets import *
 from PyQt6.QtCore import Qt
 # New For DB
-import MySQLdb as mdb
-from PyQt6.QtSql import QSqlDatabase, QSqlQuery
+from MySQLdb import _mysql
 
 class MainApp(QWidget):
     def __init__(self):
@@ -49,34 +48,38 @@ class LoginWimdow(QWidget):
         self.status.setStyleSheet('font-size:22px; color:red;')
         layout.addWidget(self.status, 4, 0, 1, 3)
 
+        # Create a func to connent to db, then call that func on init
         self.connectToDB()
+
+
     def connectToDB(self):
         try:
-            db = mdb.connect('localhost', 'root', 'root', 'pyqt6')
-            print('connected to db...')
-        except mdb.Error as e:
-            print('no', e)
+            # Call MySql.connect() and store in a class var for later use
+            # _mysql.connect(server, username, password, database name)
+            self.db = _mysql.connect('localhost', 'root', 'root', 'pyqt6')
+            print('Connected to DB...')
+        except Exception as e:
+            print('Failed to connect to DB',e)
             sys.exit(1)
 
     def checkCredentials(self):
         username = self.lineEdits['username'].text()
         password = self.lineEdits['password'].text()
 
-        query = QSqlQuery()
-        query.prepare('SELECT * FROM user WHERE username=:username')
-        query.bindValue(':username', username)
-        query.exec()
+        query = """SELECT * FROM users WHERE username = '%s';""" % (''.join(username))
+        print(f'Running Query: {query}')
+        self.db.query(query)
+        
+        results = self.db.store_result()
+        user = results.fetch_row(1,1)
 
-        if query.first():
-            if query.value('password') == password:
-                time(1)
+
+        if user:
+            if user[0]['password'].decode('utf-8') == password:
                 self.mainApp = MainApp()
                 self.mainApp.show()
                 self.close()
-            else:
-                self.status.setText('invalid login')
-        else:
-            self.status.setText('Invalid Login')
+        self.status.setText('Invalid Login')
 
 
 
