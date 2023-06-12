@@ -13,7 +13,7 @@
   <property name="minimumSize">
    <size>
     <width>300</width>
-    <height>46</height>
+    <height>176</height>
    </size>
   </property>
   <property name="font">
@@ -29,38 +29,21 @@
   <widget class="QWidget" name="dockWidgetContents">
    <layout class="QVBoxLayout" name="verticalLayout">
     <item>
-     <widget class="QListWidget" name="carList">
-      <item>
-       <property name="text">
-        <string>2003 Corvette</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>2016 Viper</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>1995 Dayton</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>1997 Grand Am</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>1995 Cummins</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>1995 Jeep</string>
-       </property>
-      </item>
+     <widget class="QPushButton" name="updateBtn">
+      <property name="font">
+       <font>
+        <family>SimSun-ExtB</family>
+        <pointsize>18</pointsize>
+        <italic>false</italic>
+       </font>
+      </property>
+      <property name="text">
+       <string>Update List</string>
+      </property>
      </widget>
+    </item>
+    <item>
+     <widget class="QListWidget" name="carList"/>
     </item>
    </layout>
   </widget>

@@ -10,5 +10,5 @@ class MainWindow(QMainWindow):
     def __init__(self,db):
         super().__init__()
         uic.loadUi('./widgets/gui/mainWindow.ui', self)
-        self.addDockWidget(Qt.DockWidgetArea.LeftDockWidgetArea, CarForm())
-        self.addDockWidget(Qt.DockWidgetArea.RightDockWidgetArea, CarList())
+        self.addDockWidget(Qt.DockWidgetArea.LeftDockWidgetArea, CarForm(db))
+        self.addDockWidget(Qt.DockWidgetArea.RightDockWidgetArea, CarList(db))
