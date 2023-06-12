@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>dbData</class>
+ <widget class="QDockWidget" name="dbData">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>754</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>400</width>
+    <height>216</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>420</width>
+    <height>2000</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Database Data</string>
+  </property>
+  <widget class="QWidget" name="dockWidgetContents">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="1" column="0">
+     <widget class="QTabWidget" name="displayData">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>420</width>
+        <height>16777215</height>
+       </size>
+      </property>
+      <property name="tabShape">
+       <enum>QTabWidget::Triangular</enum>
+      </property>
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <property name="movable">
+       <bool>true</bool>
+      </property>
+      <widget class="QWidget" name="carTable">
+       <attribute name="title">
+        <string>Car Table</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout">
+        <item>
+         <widget class="QTableWidget" name="tableCars">
+          <row>
+           <property name="text">
+            <string>1</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>2</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>3</string>
+           </property>
+          </row>
+          <column>
+           <property name="text">
+            <string>Make</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Model</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Year</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Country</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Price (USD)</string>
+           </property>
+          </column>
+          <item row="0" column="0">
+           <property name="text">
+            <string>Dodge</string>
+           </property>
+          </item>
+          <item row="0" column="1">
+           <property name="text">
+            <string>ARC Viper</string>
+           </property>
+          </item>
+          <item row="0" column="2">
+           <property name="text">
+            <string>2016</string>
+           </property>
+          </item>
+          <item row="0" column="3">
+           <property name="text">
+            <string>USA</string>
+           </property>
+          </item>
+          <item row="0" column="4">
+           <property name="text">
+            <string>$112000</string>
+           </property>
+          </item>
+          <item row="1" column="0">
+           <property name="text">
+            <string>Chevy</string>
+           </property>
+          </item>
+          <item row="1" column="1">
+           <property name="text">
+            <string>C7 Corvette Z06</string>
+           </property>
+          </item>
+          <item row="1" column="2">
+           <property name="text">
+            <string>2017</string>
+           </property>
+          </item>
+          <item row="1" column="3">
+           <property name="text">
+            <string>USA</string>
+           </property>
+          </item>
+          <item row="1" column="4">
+           <property name="text">
+            <string>$121000</string>
+           </property>
+          </item>
+          <item row="2" column="0">
+           <property name="text">
+            <string>Nissan</string>
+           </property>
+          </item>
+          <item row="2" column="1">
+           <property name="text">
+            <string>Skyline R-32</string>
+           </property>
+          </item>
+          <item row="2" column="2">
+           <property name="text">
+            <string>2006</string>
+           </property>
+          </item>
+          <item row="2" column="3">
+           <property name="text">
+            <string>Japan</string>
+           </property>
+          </item>
+          <item row="2" column="4">
+           <property name="text">
+            <string>$78000</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="helloTable">
+       <attribute name="title">
+        <string>Hello Table</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_3">
+        <item>
+         <widget class="QTableWidget" name="tableHello">
+          <row>
+           <property name="text">
+            <string>New Row</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>2</string>
+           </property>
+          </row>
+          <column>
+           <property name="text">
+            <string>name</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>message</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>date</string>
+           </property>
+          </column>
+          <item row="0" column="0">
+           <property name="text">
+            <string>Ray</string>
+           </property>
+          </item>
+          <item row="0" column="1">
+           <property name="text">
+            <string>Hello There Ray</string>
+           </property>
+          </item>
+          <item row="0" column="2">
+           <property name="text">
+            <string>04/11/2023</string>
+           </property>
+          </item>
+          <item row="1" column="0">
+           <property name="text">
+            <string>Bob</string>
+           </property>
+          </item>
+          <item row="1" column="1">
+           <property name="text">
+            <string>Hello There Bob</string>
+           </property>
+          </item>
+          <item row="1" column="2">
+           <property name="text">
+            <string>05/18/2023</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="locationTable">
+       <attribute name="title">
+        <string>Location Table</string>
+       </attribute>
+       <widget class="QTableWidget" name="tableLocation">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>10</y>
+          <width>391</width>
+          <height>601</height>
+         </rect>
+        </property>
+        <row>
+         <property name="text">
+          <string>1</string>
+         </property>
+        </row>
+        <row>
+         <property name="text">
+          <string>2</string>
+         </property>
+        </row>
+        <column>
+         <property name="text">
+          <string>Dest. Name</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>State</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Date Visited</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Fun Level (%)</string>
+         </property>
+        </column>
+        <item row="0" column="0">
+         <property name="text">
+          <string>Hersey Park</string>
+         </property>
+        </item>
+        <item row="0" column="1">
+         <property name="text">
+          <string>PA</string>
+         </property>
+        </item>
+        <item row="0" column="2">
+         <property name="text">
+          <string>06/07/2023</string>
+         </property>
+        </item>
+        <item row="0" column="3">
+         <property name="text">
+          <string>91%</string>
+         </property>
+        </item>
+        <item row="1" column="0">
+         <property name="text">
+          <string>6 Flags</string>
+         </property>
+        </item>
+        <item row="1" column="1">
+         <property name="text">
+          <string>NJ</string>
+         </property>
+        </item>
+        <item row="1" column="2">
+         <property name="text">
+          <string>07/08/2022</string>
+         </property>
+        </item>
+        <item row="1" column="3">
+         <property name="text">
+          <string>94%</string>
+         </property>
+        </item>
+       </widget>
+      </widget>
+     </widget>
+    </item>
+    <item row="0" column="0">
+     <widget class="QPushButton" name="updateBtn">
+      <property name="text">
+       <string>Update</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

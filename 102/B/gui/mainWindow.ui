@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>mainWindow</class>
+ <widget class="QMainWindow" name="mainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1450</width>
+    <height>800</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+    <horstretch>1</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>700</width>
+    <height>0</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Hello World!</string>
+  </property>
+  <widget class="QWidget" name="centralwidget"/>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1450</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>0</width>
+     <height>0</height>
+    </size>
+   </property>
+   <widget class="QMenu" name="menutools">
+    <property name="title">
+     <string>tools</string>
+    </property>
+    <widget class="QMenu" name="menuChoose_Font">
+     <property name="title">
+      <string>Choose Font</string>
+     </property>
+     <addaction name="fontDefault"/>
+     <addaction name="separator"/>
+     <addaction name="fontCambria"/>
+     <addaction name="fontInkFree"/>
+     <addaction name="fontBoli"/>
+    </widget>
+    <widget class="QMenu" name="menuFont_Size">
+     <property name="title">
+      <string>Font Size</string>
+     </property>
+     <addaction name="sizeDefault"/>
+     <addaction name="separator"/>
+     <addaction name="font16"/>
+     <addaction name="font18"/>
+     <addaction name="font22"/>
+    </widget>
+    <addaction name="clearWorkspace"/>
+    <addaction name="separator"/>
+    <addaction name="menuChoose_Font"/>
+    <addaction name="menuFont_Size"/>
+   </widget>
+   <widget class="QMenu" name="menuview">
+    <property name="title">
+     <string>view</string>
+    </property>
+    <addaction name="showSideMenu"/>
+    <addaction name="showBottomDock"/>
+    <addaction name="showRightDock"/>
+   </widget>
+   <addaction name="menutools"/>
+   <addaction name="menuview"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="clearWorkspace">
+   <property name="text">
+    <string>Clear Workspace</string>
+   </property>
+   <property name="statusTip">
+    <string>Clear whole workspace...</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+C</string>
+   </property>
+  </action>
+  <action name="fontCambria">
+   <property name="text">
+    <string>Cambria</string>
+   </property>
+   <property name="statusTip">
+    <string>Sent Font Family to Cambria...</string>
+   </property>
+  </action>
+  <action name="fontInkFree">
+   <property name="text">
+    <string>Ink Free</string>
+   </property>
+   <property name="statusTip">
+    <string>Sent Font Family to Ink Free...</string>
+   </property>
+  </action>
+  <action name="fontBoli">
+   <property name="text">
+    <string>MV Boli</string>
+   </property>
+   <property name="statusTip">
+    <string>Sent Font Family to MV Boli...</string>
+   </property>
+  </action>
+  <action name="fontDefault">
+   <property name="text">
+    <string>Default</string>
+   </property>
+   <property name="statusTip">
+    <string>Default Font And Size...</string>
+   </property>
+  </action>
+  <action name="action12">
+   <property name="text">
+    <string>Default</string>
+   </property>
+  </action>
+  <action name="font16">
+   <property name="text">
+    <string>16</string>
+   </property>
+   <property name="statusTip">
+    <string>Sent Font Size To 16...</string>
+   </property>
+  </action>
+  <action name="font18">
+   <property name="text">
+    <string>18</string>
+   </property>
+   <property name="statusTip">
+    <string>Sent Font Size To 18...</string>
+   </property>
+  </action>
+  <action name="n2">
+   <property name="text">
+    <string>22</string>
+   </property>
+  </action>
+  <action name="font22">
+   <property name="text">
+    <string>22</string>
+   </property>
+   <property name="statusTip">
+    <string>Sent Font Size To 22...</string>
+   </property>
+  </action>
+  <action name="sizeDefault">
+   <property name="text">
+    <string>Default</string>
+   </property>
+   <property name="statusTip">
+    <string>Default Font And Size...</string>
+   </property>
+  </action>
+  <action name="showSideMenu">
+   <property name="text">
+    <string>Side Menu</string>
+   </property>
+  </action>
+  <action name="showBottomDock">
+   <property name="text">
+    <string>Bottom Dock</string>
+   </property>
+  </action>
+  <action name="showRightDock">
+   <property name="text">
+    <string>Right Dock</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
