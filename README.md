@@ -37,6 +37,6 @@ I kept the direction of progression pretty simple.  You can follow my path by st
 - Successfully shared DB connection with sperate widgets - Preventing multiple connection
 - Connected login widget with functional app
 - Create and Read capabilities
-- Established connection with List Widget Item on click (for future idea :stuck_out_tongue_winking_eye:)
+- Established connection with List Widget Item on click (for a future idea :stuck_out_tongue_winking_eye:)
 #### B - CRUD :construction_worker::construction::construction_worker:
 - Coming Soon!
