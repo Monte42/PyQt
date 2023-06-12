@@ -1,14 +1,21 @@
 from PyQt6.QtWidgets import QDockWidget,QListWidgetItem
 from PyQt6 import uic
 
+
 class CarList(QDockWidget):
-    def __init__(self,db):
+    # When I want to update the car details display I have to do that
+    #   from the mainWindow.  To achieve this I created a function in
+    #   the MainWindow class (see mainWindow.py) and passed it to this
+    #   class        Right Here  VVVVVVVV
+    def __init__(self,db,updateCentralWidget):
         super().__init__()
         uic.loadUi('./widgets/gui/carList.ui', self)
         self.db = db
         self.updateBtn.clicked.connect(self.getAllCars)
         self.carList.itemClicked.connect(self.carDetails)
         self.getAllCars()
+        #  I then gave a place in this class
+        self.updateCarDetails = updateCentralWidget
 
     def getAllCars(self):
         self.carList.clear()
@@ -20,4 +27,6 @@ class CarList(QDockWidget):
             li = QListWidgetItem(f"{car['id'].decode('utf-8')} {car['year'].decode('utf-8')} {car['model'].decode('utf-8')}", self.carList)
 
     def carDetails(self,item):
-        print('Hello',item.text()[0])
+        id = item.text()[0]
+        # Now I was able to call it from the mainWindow file to update it here 
+        self.updateCarDetails(id)
