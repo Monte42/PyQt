@@ -24,9 +24,9 @@ class CarList(QDockWidget):
         results = self.db.store_result()
         all_cars = results.fetch_row(0,1)
         for car in all_cars:
-            li = QListWidgetItem(f"{car['id'].decode('utf-8')} {car['year'].decode('utf-8')} {car['model'].decode('utf-8')}", self.carList)
+            li = QListWidgetItem(f"{car['id'].decode('utf-8')}|{car['year'].decode('utf-8')} {car['model'].decode('utf-8')}", self.carList)
 
     def carDetails(self,item):
-        id = item.text()[0]
+        id = item.text().split('|')[0]
         # Now I was able to call it from the mainWindow file to update it here 
         self.updateCarDetails(id)
