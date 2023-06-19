@@ -48,6 +48,6 @@ I kept the direction of progression pretty simple.  You can follow my path by st
 - Created a Car model class
 - Used model class to store and work with model instances
 - Increased Efficiency working with the DB :chart_with_upwards_trend:
-- Decreased difficulty of makeing quiers :chart_with_downwards_trend:
+- Decreased difficulty of making quiers :chart_with_downwards_trend:
 ### 302 - Models And Relationships :construction_worker::construction::construction_worker:
 - Coming Soon!
