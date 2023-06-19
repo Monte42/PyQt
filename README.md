@@ -38,5 +38,16 @@ I kept the direction of progression pretty simple.  You can follow my path by st
 - Connected login widget with functional app
 - Create and Read capabilities
 - Established connection with List Widget Item on click (for a future idea :stuck_out_tongue_winking_eye:)
-#### B - CRUD :construction_worker::construction::construction_worker:
+#### B - CRUD
+- Updates car display when list item is clicked
+- Created popup-window for the Update Form
+- Successfully populate form with current data for car
+- Achieved Update and Delete capabilities
+- List, form, and car details all update automatically on submits
+### 301 - Experimenting With Class Models
+- Created a Car model class
+- Used model class to store and work with model instances
+- Increased Efficiency working with the DB :chart_with_upwards_trend:
+- Decreased difficulty of makeing quiers :chart_with_downwards_trend:
+### 302 - Models And Relationships :construction_worker::construction::construction_worker:
 - Coming Soon!
