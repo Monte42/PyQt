@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>930</width>
-    <height>861</height>
+    <width>1299</width>
+    <height>855</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -17,6 +17,12 @@
    <layout class="QHBoxLayout" name="horizontalLayout">
     <item>
      <widget class="QFrame" name="frameDbDisplay">
+      <property name="minimumSize">
+       <size>
+        <width>410</width>
+        <height>0</height>
+       </size>
+      </property>
       <property name="frameShape">
        <enum>QFrame::StyledPanel</enum>
       </property>
@@ -24,25 +30,6 @@
        <enum>QFrame::Raised</enum>
       </property>
       <layout class="QGridLayout" name="gridLayout">
-       <item row="0" column="0">
-        <widget class="QLabel" name="labelAuthors">
-         <property name="font">
-          <font>
-           <pointsize>14</pointsize>
-          </font>
-         </property>
-         <property name="text">
-          <string>Authors</string>
-         </property>
-        </widget>
-       </item>
-       <item row="1" column="0" colspan="2">
-        <widget class="QTableWidget" name="tableAuthors">
-         <property name="statusTip">
-          <string>Click on an Author to view details...</string>
-         </property>
-        </widget>
-       </item>
        <item row="2" column="0">
         <widget class="QLabel" name="labelBooks">
          <property name="font">
@@ -55,11 +42,53 @@
          </property>
         </widget>
        </item>
+       <item row="4" column="1">
+        <widget class="QPushButton" name="newAuthorBtn">
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
+         <property name="statusTip">
+          <string>Create a new Author...</string>
+         </property>
+         <property name="text">
+          <string>New Author</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="0">
+        <widget class="QLabel" name="labelAuthors">
+         <property name="font">
+          <font>
+           <pointsize>14</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>Authors</string>
+         </property>
+        </widget>
+       </item>
        <item row="3" column="0" colspan="2">
         <widget class="QTableWidget" name="tableBooks">
          <property name="statusTip">
           <string>Click on a Book to view details...</string>
          </property>
+         <column>
+          <property name="text">
+           <string>Title</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Author</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Pages</string>
+          </property>
+         </column>
         </widget>
        </item>
        <item row="4" column="0">
@@ -77,19 +106,26 @@
          </property>
         </widget>
        </item>
-       <item row="4" column="1">
-        <widget class="QPushButton" name="newAuthorBtn">
-         <property name="font">
-          <font>
-           <pointsize>12</pointsize>
-          </font>
-         </property>
+       <item row="1" column="0" colspan="2">
+        <widget class="QTableWidget" name="tableAuthors">
          <property name="statusTip">
-          <string>Create a new Author...</string>
+          <string>Click on an Author to view details...</string>
          </property>
-         <property name="text">
-          <string>New Author</string>
-         </property>
+         <column>
+          <property name="text">
+           <string>First Name</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>New Column</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string># of Books</string>
+          </property>
+         </column>
         </widget>
        </item>
       </layout>
@@ -132,8 +168,9 @@
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:7.8pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;h1 style=&quot; margin-top:18px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:xx-large; font-weight:600;&quot;&gt;No Data...&lt;/span&gt;&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;</string>
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;    &lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;    &lt;/p&gt;
+&lt;h1 style=&quot; margin-top:18px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:xx-large; font-weight:600;&quot;&gt;No Data To Show At This Time...&lt;/span&gt;  &lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;</string>
          </property>
         </widget>
        </item>
@@ -147,7 +184,7 @@ p, li { white-space: pre-wrap; }
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>930</width>
+     <width>1299</width>
      <height>26</height>
     </rect>
    </property>
