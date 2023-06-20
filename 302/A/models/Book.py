@@ -22,6 +22,15 @@ class Book:
 
     # CLASS METHODS
     @classmethod
+    def create_new_book(cls,db,form_data):
+        query = f"""
+        INSERT INTO books(author_id,title,pages)
+        VALUES({form_data['author_id']},{form_data['title']},{form_data['pages']});
+        """
+        db.query(query)
+
+
+    @classmethod
     def fecth_all_books(cls, db):
         query = """
         SELECT *

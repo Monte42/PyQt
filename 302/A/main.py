@@ -13,6 +13,7 @@ class MainWindow(QMainWindow):
 
         self.tableBooks.cellPressed.connect(self.onItemClickBooks)
         self.tableAuthors.cellPressed.connect(self.onItemClickAuthors)
+        self.getBookFormBtn.clicked.connect(self.open_new_book_window)
 
         self.connect_to_db()
 
@@ -56,11 +57,23 @@ class MainWindow(QMainWindow):
         for author in self.all_authors:
             self.tableAuthors.setItem(row,0,QTableWidgetItem(author.first_name.decode('utf-8')))
             self.tableAuthors.setItem(row,1,QTableWidgetItem(author.last_name.decode('utf-8')))
-            print(len(author.books))
             self.tableAuthors.setItem(row,2,QTableWidgetItem(f'{len(author.books)}'))
             row += 1
 
 
+
+    def open_new_book_window(self):
+        newBookWindow = QMainWindow()
+        form = uic.loadUi('views/bookForm.ui')
+        for author in self.all_authors:
+            form.inputAuthor.addItem(f'{author.return_full_name()} | ID:{author.id.decode("utf-8")}')
+        form.createBookBtn.clicked.connect(self.create_new_book)
+        newBookWindow.setCentralWidget(form)
+        self.newBookWindow = newBookWindow
+        self.newBookWindow.show()
+
+    def create_new_book(self):
+        pass
 
 
 
