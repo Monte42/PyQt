@@ -37,7 +37,8 @@ class Book:
         SELECT *
         FROM books
         JOIN authors
-        ON books.author_id = authors.id;
+        ON books.author_id = authors.id
+        ORDER BY books.id;
         """
         db.query(query)
         store = db.store_result()
