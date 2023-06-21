@@ -25,8 +25,9 @@ class Book:
     def create_new_book(cls,db,form_data):
         query = f"""
         INSERT INTO books(author_id,title,pages)
-        VALUES({form_data['author_id']},{form_data['title']},{form_data['pages']});
+        VALUES({form_data['author_id']},"{form_data['title']}",{form_data['pages']});
         """
+        print(query)
         db.query(query)
 
 

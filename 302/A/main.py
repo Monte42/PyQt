@@ -19,6 +19,7 @@ class MainWindow(QMainWindow):
 
         self.update_books_table()
         self.update_authors_table()
+        self.onItemClickAuthors(-1)
 
 
 
@@ -30,10 +31,10 @@ class MainWindow(QMainWindow):
         except Exception as e:
             print('Bop Boop Beep, something went wrong. so very wrong...')
 
-    def onItemClickBooks(self, row, col):
+    def onItemClickBooks(self, row):
         self.labelDisplay.setText(f'Showing Details About Book {self.all_books[row].title}')
         self.instanceDisplay.setText(self.all_books[row].display_full_data())
-    def onItemClickAuthors(self, row, col):
+    def onItemClickAuthors(self, row):
         self.labelDisplay.setText(f'Showing Details About Author {self.all_authors[row].return_full_name()}')
         self.instanceDisplay.setText(self.all_authors[row].display_full_data())
 
@@ -73,7 +74,17 @@ class MainWindow(QMainWindow):
         self.newBookWindow.show()
 
     def create_new_book(self):
-        pass
+        form = self.newBookWindow.centralWidget()
+        new_book = {
+            'author_id': int(form.inputAuthor.currentText().split(':')[1]),
+            'title': form.inputTitle.text(),
+            'pages': int(form.inputPages.text())
+        }
+        Book.create_new_book(self.db, new_book)
+        self.update_authors_table()
+        self.update_books_table()
+        self.onItemClickBooks(-1)
+        self.newBookWindow.close()
 
 
 
