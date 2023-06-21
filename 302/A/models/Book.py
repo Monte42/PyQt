@@ -27,7 +27,6 @@ class Book:
         INSERT INTO books(author_id,title,pages)
         VALUES({form_data['author_id']},"{form_data['title']}",{form_data['pages']});
         """
-        print(query)
         db.query(query)
 
 

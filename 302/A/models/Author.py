@@ -24,6 +24,14 @@ class Author:
 
 
     @classmethod
+    def create_new_author(self,db,form_data):
+        query = f"""
+        INSERT INTO authors(first_name,last_name)
+        VALUES("{form_data['first_name']}", "{form_data['last_name']}");
+        """
+        db.query(query)
+
+    @classmethod
     def fecth_all_authors(cls,db):
         query = f"""
         SELECT * 
