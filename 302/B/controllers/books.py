@@ -7,7 +7,7 @@ class BookController():
     # GUI CONTROLS
     def onItemClickBooks(self, row):
         self.labelDisplay.setText(f'Showing Details About Book {self.all_books[row].title}')
-        self.instanceDisplay.setText(self.all_books[row].display_full_data())
+        return  self.all_books[row].display_full_data()
 
     def open_new_book_window(self):
         newBookWindow = QMainWindow()

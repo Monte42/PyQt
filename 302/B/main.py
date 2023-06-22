@@ -7,6 +7,7 @@ from models.Book import Book
 from models.Author import Author
 from controllers.books import BookController
 from controllers.authors import AuthorController
+from controllers.reads import ReadController
 
 
 class MainWindow(QMainWindow):
@@ -37,7 +38,10 @@ class MainWindow(QMainWindow):
 
 
     def onItemClickBooks(self, row):
-        BookController.onItemClickBooks(self,row)
+        data = 'DETAILS:\n'
+        data += f'{BookController.onItemClickBooks(self,row)}\n'
+        data += ReadController.fetch_reads(self,'book',self.all_books[row].id)
+        self.instanceDisplay.setText(data)
     def onItemClickAuthors(self, row):
         AuthorController.onItemClickAuthors(self,row)
 
