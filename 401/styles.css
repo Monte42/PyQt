@@ -1,0 +1,28 @@
+QMainWindow{
+    background-color: #469;
+}
+QLabel{
+    color:white;
+    font-size:25px;
+    width: fit-content;
+    font-family: ink free;
+}
+QPushButton{
+    color: yellow;
+}
+QPushButton:hover{
+    color: orange;
+}
+QPushButton:focus{
+    border:2px solid blue;
+}
+#dude{
+    background-color: red;
+}
+#sweet{
+    background-color: green;
+}
+.danger{
+    background-color: red;
+    color: white;
+}
