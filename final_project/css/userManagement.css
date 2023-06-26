@@ -1,0 +1,26 @@
+QWidget{
+    background-color: #0044aa;
+    color: #ddd;
+    font-family: 'Cambria Math';
+}
+#mainHeader{
+    font-size: 22px;
+}
+#submitBtn{
+    background-color: #ddd;
+    color: #000;
+}
+.label{
+    font-size: 18px;
+}
+.input{
+    background-color: #ccc;
+    color: #000;
+    border: 1px solid #000;
+    font-family: 'Ink Free';
+    font-size: 18px;
+}
+.input:focus{
+    background-color: #eee;
+    border: 1px solid #fff
+}
