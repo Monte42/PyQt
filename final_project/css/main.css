@@ -1,0 +1,13 @@
+QTableWidget, QTableWidget *{
+    background-color: #4699dd;
+    color: #000;
+    font-size: 18px;
+}
+#notesHeader{
+    font-size: 22px;
+    margin-top: 15px;
+}
+#notesDisplay{
+    color: #aaabbc;
+    background-color: #000;
+}

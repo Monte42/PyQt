@@ -18,6 +18,8 @@ class Login(QWidget):
 
     def checkCredentials(self):
         self.mainWindow = MainWindow()
+        with open('css/main.css','r') as file:
+            self.mainWindow.setStyleSheet(file.read())
         self.mainWindow.show()
         self.close()
 
