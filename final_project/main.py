@@ -27,7 +27,7 @@ if __name__=='__main__':
     app = QApplication(sys.argv)
 
     main = Login()
-    with open('css/userManagement.css','r') as file:
+    with open('css/form.css','r') as file:
         app.setStyleSheet(file.read())
     main.show()
 
