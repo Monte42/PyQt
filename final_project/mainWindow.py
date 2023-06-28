@@ -20,10 +20,7 @@ class MainWindow(QMainWindow):
         if not firstOpen: self.removeDockWidget(self.layout().itemAt(0).widget())
         self.addDockWidget(Qt.DockWidgetArea.RightDockWidgetArea, Calculator())
         with open('css/calculator.css','r') as file:
-            for i in range(self.layout().count()):
-                print(self.layout().itemAt(i).widget())
             self.layout().itemAt(0).widget().setStyleSheet(file.read())
-        print('\n\n\n')
 
     def openAdminDashboard(self):
         self.adminDashboard = AdminDashboard()
