@@ -24,4 +24,6 @@ class MainWindow(QMainWindow):
 
     def openAdminDashboard(self):
         self.adminDashboard = AdminDashboard()
+        with open('css/adminDashboard.css','r') as file:
+            self.adminDashboard.setStyleSheet(file.read())
         self.adminDashboard.show()
