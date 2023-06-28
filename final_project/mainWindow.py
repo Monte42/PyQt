@@ -10,6 +10,10 @@ class MainWindow(QMainWindow):
         uic.loadUi('./views/main.ui', self)
 
         self.addDockWidget(Qt.DockWidgetArea.RightDockWidgetArea, Calculator())
+        with open('css/calculator.css','r') as file:
+            self.layout().itemAt(0).widget().setStyleSheet(file.read())
+
+
 
         self.enterAdmin.triggered.connect(self.openAdminDashboard)
 

@@ -3,6 +3,10 @@ QTableWidget, QTableWidget *{
     color: #000;
     font-size: 18px;
 }
+QMenuBar, QMenuBar *{
+    background-color: #555;
+    padding: 2px;
+}
 #notesHeader{
     font-size: 22px;
     margin-top: 15px;

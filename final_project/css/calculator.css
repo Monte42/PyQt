@@ -1,0 +1,16 @@
+QDockWidget *{
+    background-color: #444;
+    padding: 10px;
+}
+#historyList{
+    margin: 0px 10px;
+    background-color: #777;
+    font-size: 32px;
+}
+#display{
+    margin: 5px 10px;
+    font-size: 26px;
+}
+#keypad *{
+    font-size: 18px;
+}
