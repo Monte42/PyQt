@@ -10,7 +10,5 @@ class ChoreManager(QMainWindow):
         self.personInput.setProperty('class','input')
         self.taskLabel.setProperty('class','label')
         self.taskInput.setProperty('class','input')
-        self.dateLabel.setProperty('class','label')
-        self.dateInput.setProperty('class','input')
         self.notesLabel.setProperty('class','label')
         self.notesInput.setProperty('class','input')
