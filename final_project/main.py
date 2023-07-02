@@ -38,7 +38,7 @@ class Login(QWidget):
         
         if user:
             if user[0]['password'].decode('utf-8') == password:
-                self.mainWindow = MainWindow()
+                self.mainWindow = MainWindow(user[0])
                 with open('css/main.css','r') as file:
                     self.mainWindow.setStyleSheet(file.read())
                 self.mainWindow.show()
