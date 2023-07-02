@@ -12,7 +12,7 @@ from PyQt6 import QtCore, QtGui, QtWidgets
 class Ui_userNamangementWindow(object):
     def setupUi(self, userNamangementWindow):
         userNamangementWindow.setObjectName("userNamangementWindow")
-        userNamangementWindow.resize(332, 163)
+        userNamangementWindow.resize(328, 168)
         self.usernameLabel = QtWidgets.QLabel(parent=userNamangementWindow)
         self.usernameLabel.setGeometry(QtCore.QRect(20, 60, 91, 21))
         self.usernameLabel.setObjectName("usernameLabel")
@@ -31,9 +31,13 @@ class Ui_userNamangementWindow(object):
         self.mainHeader.setAlignment(QtCore.Qt.AlignmentFlag.AlignHCenter|QtCore.Qt.AlignmentFlag.AlignTop)
         self.mainHeader.setObjectName("mainHeader")
         self.submitBtn = QtWidgets.QPushButton(parent=userNamangementWindow)
-        self.submitBtn.setGeometry(QtCore.QRect(220, 120, 93, 28))
+        self.submitBtn.setGeometry(QtCore.QRect(220, 130, 93, 28))
         self.submitBtn.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
         self.submitBtn.setObjectName("submitBtn")
+        self.status = QtWidgets.QLabel(parent=userNamangementWindow)
+        self.status.setGeometry(QtCore.QRect(10, 130, 201, 21))
+        self.status.setText("")
+        self.status.setObjectName("status")
 
         self.retranslateUi(userNamangementWindow)
         QtCore.QMetaObject.connectSlotsByName(userNamangementWindow)
