@@ -4,6 +4,8 @@ class Chore():
     def __init__(self, data):
         super().__init__()
         self.chore_id = data['id']
+        self.due_date = data['due_date']
+        self.comment = data['comment']
         self.user = data['user_id']
         self.task = data['task_id']
 
@@ -12,8 +14,8 @@ class Chore():
     @classmethod
     def create_new_chore(cls,db,form_data):
         query = f"""
-        INSERT INTO chores_on_users(user_id,task_id)
-        VALUES({form_data['user_id']}, {form_data['task_id']});
+        INSERT INTO chores_on_users(due_date,comment,user_id,task_id)
+        VALUES({form_data['due_date']},{form_data['comment']},{form_data['user_id']},{form_data['task_id']});
         """
         try:
             db.query(query)
@@ -36,8 +38,6 @@ class Chore():
             for row in results:
                 row = decode_model(row)
                 this_chore = cls(row)
-                this_chore.user = row['users_id']
-                this_chore.task = row['task_id']
                 all_chores.append(this_chore)
             return {'results':True, 'data':all_chores}
         except Exception as e:
@@ -49,6 +49,8 @@ class Chore():
         query = f"""
         UPDATE chores_on_users
         SET
+        due_date = {form_data['due_date']},
+        comment = {form_data['comment']},
         user_id = {form_data['user_id']},
         task_id = {form_data['task_id']}
         WHERE id = {form_data['id']}

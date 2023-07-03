@@ -13,27 +13,22 @@ class AdminDashboard(QWidget):
         uic.loadUi('views/adminDashboard.ui', self)
         self.db = db
 
-        self.newChoreBtn.clicked.connect(self.openNewChoreForm)
         self.newTaskBtn.clicked.connect(self.openNewTaskForm)
         self.newUserBtn.clicked.connect(self.openNewUserForm)
-        self.editChoreBtn.clicked.connect(self.openEditChoreForm)
+
         self.editTaskBtn.clicked.connect(self.openEditTaskForm)
         self.editUserBtn.clicked.connect(self.openEditUserForm)
 
+        self.choreManagerBtn.clicked.connect(self.openNewChoreForm)
 
 
 
-    def openNewChoreForm(self):
-        self.choreForm = ChoreManager()
-        with open('css/form.css','r') as file:
-            self.choreForm.setStyleSheet(file.read())
-        self.choreForm.show()
+
     def openNewTaskForm(self):
         self.taskForm = TaskManager()
         with open('css/form.css','r') as file:
             self.taskForm.setStyleSheet(file.read())
         self.taskForm.show()
-
 
     def openNewUserForm(self):
         self.userForm = UserManager(self)
@@ -42,17 +37,12 @@ class AdminDashboard(QWidget):
         self.userForm.show()
 
 
-    def openEditChoreForm(self):
-        self.choreForm = ChoreManager()
-        with open('css/form.css','r') as file:
-            self.choreForm.setStyleSheet(file.read())
-        self.choreForm.show()
+
     def openEditTaskForm(self):
         self.taskForm = TaskManager()
         with open('css/form.css','r') as file:
             self.taskForm.setStyleSheet(file.read())
         self.taskForm.show()
-
 
     def openEditUserForm(self):
         self.objSelect = UpdateObjSelect(self.db)
@@ -62,3 +52,11 @@ class AdminDashboard(QWidget):
         with open('css/form.css','r') as file:
             self.objSelect.setStyleSheet(file.read())
         self.objSelect.show()
+
+
+
+    def openChoreManager(self):
+        self.choreForm = ChoreManager()
+        with open('css/form.css','r') as file:
+            self.choreForm.setStyleSheet(file.read())
+        self.choreForm.show()

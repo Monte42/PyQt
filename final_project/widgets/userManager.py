@@ -5,7 +5,7 @@ from controllers.users import UserController
 from utils.general import decode_model, create_ui_message_box
 
 class UserManager(QWidget):
-    def __init__(self,parent,username=None):
+    def __init__(self,parent,username=None,is_admin=False):
         super().__init__()
         uic.loadUi('views/userManagement.ui', self)
         self.usernameLabel.setProperty('class','label')
@@ -14,6 +14,7 @@ class UserManager(QWidget):
         self.passwordInput.setProperty('class','input')
         self.passwordInput.setEchoMode(QLineEdit.EchoMode.Password)
         
+        self.is_admin = is_admin
         self.user=None
         
         self.submitBtn.clicked.connect(self.on_submit)
@@ -31,7 +32,7 @@ class UserManager(QWidget):
             updated_user = {
                 'id':self.user.id,
                 'username':self.usernameInput.text(),
-                'password':self.passwordInput.text()
+                'password':self.passwordInput.text(),
             }
             UserController.update_user(self.db,updated_user)
             self.parent.close()
@@ -39,7 +40,8 @@ class UserManager(QWidget):
         else:
             new_user = {
                 'username':self.usernameInput.text(),
-                'password':self.passwordInput.text()
+                'password':self.passwordInput.text(),
+                'is_admin':self.is_admin,
             }
             result = UserController.create_new_user(self.db,new_user)
             print(result)

@@ -16,19 +16,19 @@ class User():
     @classmethod
     def create_new_user(cls, db, form_data):
         query = f"""
-        INSERT INTO users(username, password)
-        VALUES('{form_data['username']}','{form_data['password']}');
+        INSERT INTO users(username, password,is_admin)
+        VALUES('{form_data['username']}','{form_data['password']}','{form_data['is_admin']}');
         """
         if cls.form_vaildation(form_data):
             data = {'errors':cls.form_vaildation(form_data)}
-            data['results'] = False
+            data['status'] = False
             return data
         try:
             db.query(query)
-            return {'results':True}
+            return {'status':True}
         except Exception as e:
             print('***ERROR: ',e)
-            return {'results':False, 'data':{'error':e}}
+            return {'status':False, 'data':{'error':e}}
 
     @classmethod
     def fetch_all_users(cls,db):
@@ -40,7 +40,7 @@ class User():
             return results
         except Exception as e:
             print('***ERROR: ',e)
-            return {'results':False, 'data':{'error':e}}
+            return {'status':False, 'data':{'error':e}}
 
     @classmethod
     def fetch_user_by_username(cls,db,username):
@@ -57,10 +57,10 @@ class User():
             this_user = cls(decode_model(results[0]))
             for row in results:
                 this_user.chores.append(Chore(row))
-            return {'results':True, 'data': cls(decode_model(results[0]))}
+            return {'status':True, 'data': cls(decode_model(results[0]))}
         except Exception as e:
             print('***ERROR: ',e)
-            return {'results':False, 'data':{'error':e}}
+            return {'status':False, 'data':{'error':e}}
 
     @classmethod
     def update_user(cls,db,form_data):
@@ -73,10 +73,10 @@ class User():
         """
         try:
             db.query(query)
-            return {'results':True, 'data':{'id':form_data['id']}}
+            return {'status':True, 'data':{'id':form_data['id']}}
         except Exception as e:
             print('***ERROR: ',e)
-            return {'results':False, 'data':{'error':e}}
+            return {'status':False, 'data':{'error':e}}
 
     @classmethod
     def delete_user(cls,db,username):
@@ -86,10 +86,10 @@ class User():
         """
         try:
             db.query(query)
-            return {'results':True, 'data':{'id':id}}
+            return {'status':True, 'data':{'id':id}}
         except Exception as e:
             print('***ERROR: ',e)
-            return {'results':False, 'data':{'error':e}}
+            return {'status':False, 'data':{'error':e}}
 
 
 
@@ -99,7 +99,7 @@ class User():
         if len(form_data['username']) <= 2:
             is_valid = False
             errors.append('** Username must be at least three characters')
-        if len(form_data['password']) <= 5:
+        if len(form_data['password']) < 5:
             is_valid = False
             errors.append('** Password must be at least five characters')
         return errors
