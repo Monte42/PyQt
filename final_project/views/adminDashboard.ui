@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>356</width>
-    <height>373</height>
+    <width>352</width>
+    <height>364</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -106,7 +106,7 @@
     <string>Edit Task</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="editUser">
+  <widget class="QPushButton" name="editUserBtn">
    <property name="geometry">
     <rect>
      <x>10</x>

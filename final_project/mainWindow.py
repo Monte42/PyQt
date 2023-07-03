@@ -6,18 +6,22 @@ from widgets.adminDashboard import AdminDashboard
 from utils import general
 
 class MainWindow(QMainWindow):
-    def __init__(self,user):
+    def __init__(self,db,user):
         super().__init__()
+        # Loading the UI
         uic.loadUi('./views/main.ui', self)
-        self.current_user = general.decode_model(user)
+        self.current_user = general.decode_model(user) #Storing logged in user & decode
+        self.db = db
+        # Set up clicked/triggered listeners
+        self.enterAdmin.triggered.connect(self.openAdminDashboard)
+        self.showCalculator.triggered.connect(self.openCalculator)
 
+        # Run Required opening methods
         self.openCalculator(True)
 
 
 
-        self.enterAdmin.triggered.connect(self.openAdminDashboard)
-        self.showCalculator.triggered.connect(self.openCalculator)
-
+    # Widget Specit Methods
     def openCalculator(self,firstOpen=False):
         if not firstOpen: self.removeDockWidget(self.layout().itemAt(0).widget())
         self.addDockWidget(Qt.DockWidgetArea.RightDockWidgetArea, Calculator())
@@ -26,7 +30,7 @@ class MainWindow(QMainWindow):
 
     def openAdminDashboard(self):
         if self.current_user['is_admin'] == '1':
-            self.adminDashboard = AdminDashboard()
+            self.adminDashboard = AdminDashboard(self.db)
             with open('css/adminDashboard.css','r') as file:
                 self.adminDashboard.setStyleSheet(file.read())
             self.adminDashboard.show()

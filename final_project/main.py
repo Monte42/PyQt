@@ -7,18 +7,25 @@ from mainWindow import MainWindow
 class Login(QWidget):
     def __init__(self):
         super().__init__()
+        # Load UI
         uic.loadUi('./views/userManagement.ui', self)
+        # Set Class Property for styling
         self.usernameLabel.setProperty('class', 'label')
         self.usernameInput.setProperty('class', 'input')
         self.passwordLabel.setProperty('class', 'label')
         self.passwordInput.setProperty('class', 'input')
+        # Turnd input into redacted display
         self.passwordInput.setEchoMode(QLineEdit.EchoMode.Password)
 
+        # Set up clicked/triggered listeners 
         self.submitBtn.clicked.connect(self.checkCredentials)
 
-
+        # Run Required opening methods
         self.connect_to_db()
 
+
+
+    # Widget Specit Methods
     def connect_to_db(self):
         try:
             self.db = _mysql.connect('localhost','root','root','pyqt_chores')
@@ -26,8 +33,7 @@ class Login(QWidget):
         except Exception as e:
             print('Database Connection Failed, Error: ',e)
 
-
-    def checkCredentials(self):
+    def checkCredentials(self): # *** <= This cant be in controller due to circular imports
         username = self.usernameInput.text()
         password = self.passwordInput.text()
         
@@ -38,7 +44,7 @@ class Login(QWidget):
         
         if user:
             if user[0]['password'].decode('utf-8') == password:
-                self.mainWindow = MainWindow(user[0])
+                self.mainWindow = MainWindow(self.db, user[0])
                 with open('css/main.css','r') as file:
                     self.mainWindow.setStyleSheet(file.read())
                 self.mainWindow.show()

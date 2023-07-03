@@ -12,7 +12,7 @@ from PyQt6 import QtCore, QtGui, QtWidgets
 class Ui_adminDashboard(object):
     def setupUi(self, adminDashboard):
         adminDashboard.setObjectName("adminDashboard")
-        adminDashboard.resize(356, 373)
+        adminDashboard.resize(352, 364)
         self.mainHeader = QtWidgets.QLabel(parent=adminDashboard)
         self.mainHeader.setGeometry(QtCore.QRect(10, 10, 331, 31))
         self.mainHeader.setObjectName("mainHeader")
@@ -36,10 +36,10 @@ class Ui_adminDashboard(object):
         self.editTaskBtn.setGeometry(QtCore.QRect(10, 260, 331, 41))
         self.editTaskBtn.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
         self.editTaskBtn.setObjectName("editTaskBtn")
-        self.editUser = QtWidgets.QPushButton(parent=adminDashboard)
-        self.editUser.setGeometry(QtCore.QRect(10, 310, 331, 41))
-        self.editUser.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
-        self.editUser.setObjectName("editUser")
+        self.editUserBtn = QtWidgets.QPushButton(parent=adminDashboard)
+        self.editUserBtn.setGeometry(QtCore.QRect(10, 310, 331, 41))
+        self.editUserBtn.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
+        self.editUserBtn.setObjectName("editUserBtn")
 
         self.retranslateUi(adminDashboard)
         QtCore.QMetaObject.connectSlotsByName(adminDashboard)
@@ -53,4 +53,4 @@ class Ui_adminDashboard(object):
         self.newUserBtn.setText(_translate("adminDashboard", "Create New User"))
         self.editChoreBtn.setText(_translate("adminDashboard", "Edit Chore"))
         self.editTaskBtn.setText(_translate("adminDashboard", "Edit Task"))
-        self.editUser.setText(_translate("adminDashboard", "Edit User"))
+        self.editUserBtn.setText(_translate("adminDashboard", "Edit User"))

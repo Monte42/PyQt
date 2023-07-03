@@ -1,12 +1,11 @@
-from .User import User
-from .Task import Task
+from utils.general import decode_model
 
 class Chore():
     def __init__(self, data):
         super().__init__()
-        self.chore_id = data['id'].decode('utf-8')
-        self.user = data['user_id'].decode('utf-8')
-        self.task = data['task_id'].decode('utf-8')
+        self.chore_id = data['id']
+        self.user = data['user_id']
+        self.task = data['task_id']
 
 
 
@@ -35,9 +34,10 @@ class Chore():
             results = store.fetch_row(0,1)
             all_chores = []
             for row in results:
+                row = decode_model(row)
                 this_chore = cls(row)
-                this_chore.user = User(row)
-                this_chore.task = Task(row)
+                this_chore.user = row['users_id']
+                this_chore.task = row['task_id']
                 all_chores.append(this_chore)
             return {'results':True, 'data':all_chores}
         except Exception as e:
