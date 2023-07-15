@@ -11,6 +11,7 @@ class MainWindow(QMainWindow):
         # Loading the UI
         uic.loadUi('./views/main.ui', self)
         self.current_user = general.decode_model(user) #Storing logged in user & decode
+        self.appTitle.setText(f"Welcome, {self.current_user['username']} // id:{self.current_user['id']},admin:{self.current_user['is_admin']}")
         self.db = db
         # Set up clicked/triggered listeners
         self.enterAdmin.triggered.connect(self.openAdminDashboard)
@@ -29,7 +30,7 @@ class MainWindow(QMainWindow):
             self.layout().itemAt(0).widget().setStyleSheet(file.read())
 
     def openAdminDashboard(self):
-        if self.current_user['is_admin'] == '1':
+        if self.current_user['is_admin']:
             self.adminDashboard = AdminDashboard(self.db)
             with open('css/adminDashboard.css','r') as file:
                 self.adminDashboard.setStyleSheet(file.read())

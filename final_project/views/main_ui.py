@@ -17,6 +17,9 @@ class Ui_MainWindow(object):
         self.centralwidget.setObjectName("centralwidget")
         self.verticalLayout = QtWidgets.QVBoxLayout(self.centralwidget)
         self.verticalLayout.setObjectName("verticalLayout")
+        self.appTitle = QtWidgets.QLabel(parent=self.centralwidget)
+        self.appTitle.setObjectName("appTitle")
+        self.verticalLayout.addWidget(self.appTitle)
         self.mainHeader = QtWidgets.QLabel(parent=self.centralwidget)
         self.mainHeader.setObjectName("mainHeader")
         self.verticalLayout.addWidget(self.mainHeader)
@@ -117,6 +120,7 @@ class Ui_MainWindow(object):
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "Family Planner"))
+        self.appTitle.setText(_translate("MainWindow", "Welcome, User"))
         self.mainHeader.setText(_translate("MainWindow", "Your Chores"))
         item = self.choreList.verticalHeaderItem(0)
         item.setText(_translate("MainWindow", "1"))
