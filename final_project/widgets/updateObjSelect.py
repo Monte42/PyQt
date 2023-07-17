@@ -19,6 +19,7 @@ class UpdateObjSelect(QWidget):
         with open('css/form.css','r') as file:
             self.userForm.setStyleSheet(file.read())
         self.userForm.show()
+
     def deleteUser(self):
         User.delete_user(self.db,self.objInput.currentText())
         self.close()

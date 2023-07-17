@@ -11,7 +11,7 @@ class MainWindow(QMainWindow):
         # Loading the UI
         uic.loadUi('./views/main.ui', self)
         self.current_user = general.decode_model(user) #Storing logged in user & decode
-        self.appTitle.setText(f"Welcome, {self.current_user['username']} // id:{self.current_user['id']},admin:{self.current_user['is_admin']}")
+        self.appTitle.setText(f"Welcome, {self.current_user['username']}")
         self.db = db
         # Set up clicked/triggered listeners
         self.enterAdmin.triggered.connect(self.openAdminDashboard)

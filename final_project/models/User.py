@@ -71,6 +71,10 @@ class User():
         password = '{form_data['password']}'
         WHERE id = {form_data['id']};
         """
+        if cls.form_vaildation(form_data):
+            data = {'errors':cls.form_vaildation(form_data)}
+            data['status'] = False
+            return data
         try:
             db.query(query)
             return {'status':True, 'data':{'id':form_data['id']}}

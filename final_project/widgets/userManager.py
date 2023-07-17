@@ -29,29 +29,32 @@ class UserManager(QWidget):
 
     def on_submit(self):
         if self.user:
-            updated_user = {
-                'id':self.user.id,
-                'username':self.usernameInput.text(),
-                'password':self.passwordInput.text(),
-            }
-            UserController.update_user(self.db,updated_user)
-            self.parent.close()
-            self.close()
-        else:
-            new_user = {
-                'username':self.usernameInput.text(),
-                'password':self.passwordInput.text(),
-                'is_admin':self.is_admin,
-            }
-            result = UserController.create_new_user(self.db,new_user)
-            print(result)
-            if result['results']:
-                self.message_box = create_ui_message_box(f'{self.usernameInput.text()}, Created Successfully!')
+            result = UserController.update_user(self)
+            if result['status']:
+                self.message_box = create_ui_message_box(f'{self.usernameInput.text()}, Updated Successfully!')
                 self.message_box.show()
+                self.parent.close()
+                self.close()
             else:
                 msg = ''
                 for err in result['errors']:
                     msg += f'{err}\n'
                 self.message_box = create_ui_message_box(msg)
                 self.message_box.show()
-            self.close()
+        else:
+            new_user = {
+                'username':self.usernameInput.text(),
+                'password':self.passwordInput.text(),
+                'is_admin':self.is_admin
+            }
+            result = UserController.create_new_user(self.db,new_user)
+            if result['status']:
+                self.message_box = create_ui_message_box(f'{self.usernameInput.text()}, Created Successfully!')
+                self.message_box.show()
+                self.close()
+            else:
+                msg = ''
+                for err in result['errors']:
+                    msg += f'{err}\n'
+                self.message_box = create_ui_message_box(msg)
+                self.message_box.show()

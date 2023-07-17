@@ -19,7 +19,7 @@ class AdminDashboard(QWidget):
         self.editTaskBtn.clicked.connect(self.openEditTaskForm)
         self.editUserBtn.clicked.connect(self.openEditUserForm)
 
-        self.choreManagerBtn.clicked.connect(self.openNewChoreForm)
+        self.choreManagerBtn.clicked.connect(self.openChoreManager)
 
 
 

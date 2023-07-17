@@ -15,8 +15,14 @@ class UserController():
         return User.fetch_user_by_username(self.db, username)
 
     # UPDATE
-    def update_user(db,updated_user):
-        return User.update_user(db,updated_user)
+    def update_user(self):
+        updated_user = {
+                'id':self.user.id,
+                'username':self.usernameInput.text(),
+                'password':self.passwordInput.text(),
+                'is_admin':self.is_admin
+            }
+        return User.update_user(self.db,updated_user)
 
     # DELETE
     def delete_user(self,id):
