@@ -42,12 +42,7 @@ class UserManager(QWidget):
                 self.message_box = create_ui_message_box(msg)
                 self.message_box.show()
         else:
-            new_user = {
-                'username':self.usernameInput.text(),
-                'password':self.passwordInput.text(),
-                'is_admin':self.is_admin
-            }
-            result = UserController.create_new_user(self.db,new_user)
+            result = UserController.create_new_user(self)
             if result['status']:
                 self.message_box = create_ui_message_box(f'{self.usernameInput.text()}, Created Successfully!')
                 self.message_box.show()

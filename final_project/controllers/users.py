@@ -3,8 +3,13 @@ from models.User import User
 class UserController():
 
     # CREATE
-    def create_new_user(db,new_user):
-        return User.create_new_user(db,new_user)
+    def create_new_user(self):
+        new_user = {
+            'username':self.usernameInput.text(),
+            'password':self.passwordInput.text(),
+            'is_admin':self.is_admin
+        }
+        return User.create_new_user(self.db,new_user)
 
     # READ
     @staticmethod

@@ -4,6 +4,8 @@ def decode_model(results):
     for k in results:
         if type(results[k])==bytes:
             results[k]=results[k].decode('utf-8')
+            if k == 'is_admin':
+                results[k] = True if results[k]=='True' else False
     return results
 
 def create_ui_message_box(msg):

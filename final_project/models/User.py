@@ -90,7 +90,7 @@ class User():
         """
         try:
             db.query(query)
-            return {'status':True, 'data':{'id':id}}
+            return {'status':True, 'data':{'username':username}}
         except Exception as e:
             print('***ERROR: ',e)
             return {'status':False, 'data':{'error':e}}

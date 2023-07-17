@@ -2,6 +2,7 @@ from PyQt6.QtWidgets import QWidget
 from PyQt6 import uic
 from models.User import User
 from widgets.userManager import UserManager
+from utils.general import create_ui_message_box
 
 class UpdateObjSelect(QWidget):
     def __init__(self,db):
@@ -21,5 +22,15 @@ class UpdateObjSelect(QWidget):
         self.userForm.show()
 
     def deleteUser(self):
-        User.delete_user(self.db,self.objInput.currentText())
-        self.close()
+        result = User.delete_user(self.db,self.objInput.currentText())
+        print(result['status'])
+        if result['status']:
+            self.message_box = create_ui_message_box(f'{result["data"]["username"]} has been successfully deleted...')
+            self.message_box.show()
+            self.close()
+        else:
+            msg = ''
+            for err in result['errors']:
+                msg += f'{err}\n'
+            self.message_box = create_ui_message_box(msg)
+            self.message_box.show()

@@ -61,7 +61,7 @@ class Login(QWidget):
         
         if user:
             if user[0]['password'].decode('utf-8') == password:
-                self.open_main_window(user)
+                self.open_main_window(user[0])
         self.status.setText('Invalid Login')
         self.status.setStyleSheet('color: #700;font-size: 21px;')
 
@@ -83,7 +83,7 @@ class Login(QWidget):
             self.message_box.show()
 
     def open_main_window(self,user):
-        self.mainWindow = MainWindow(self.db, user[0])
+        self.mainWindow = MainWindow(self.db, user)
         with open('css/main.css','r') as file:
             self.mainWindow.setStyleSheet(file.read())
         self.mainWindow.show()
