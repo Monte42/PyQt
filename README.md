@@ -50,4 +50,20 @@ I kept the direction of progression pretty simple.  You can follow my path by st
 - Increased Efficiency working with the DB :chart_with_upwards_trend:
 - Decreased difficulty of making quiers :chart_with_downwards_trend:
 ### 302 - Models And Relationships :construction_worker::construction::construction_worker:
+#### A
 - Coming Soon!
+#### B
+- Coming Soon!
+### 401 - Styling :construction_worker::construction::construction_worker:
+- Coming Soon!
+### 302 - User Auth/Reg - Form Validation - Full CRUD - Many to Many - Styled :construction_worker::construction::construction_worker:
+- Coming Soon!
+
+
+Still to do:
+- Full Crud Tasks
+- create/edit/delete task on users (many to many)
+- style Chore Manager
+- Display Open Tasks specific for User on Main Window
+- Give User ability to make Task Complete. (needs one more window)
+- Give Calculator basic functionality 
